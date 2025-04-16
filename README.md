@@ -30,6 +30,40 @@ QuestLib is designed to handle all aspects of quest management in your game:
 - **Persistent Storage**: Save quest progress to files
 - **Integration Friendly**: Works with any game genre or mechanics
 
+## Sample project's quest flow
+
+```mermaid
+flowchart TD
+    q10["<b>Quest #10: A Village in Need</b><br/><hr/>Givers: 100<br/><hr/><b>Requirements:</b><br/>- TALK: #105 (×1)<br/><hr/><b>Ongoing:</b> The village is under attack by monsters....<br/><b>Completed:</b> You've learned about the threats facing ..."]
+    style q10 color:#000,fill:#f0f0ff,stroke:#000,stroke-width:2px
+    q11["<b>Quest #11: Wilderness Scout</b><br/><hr/>Givers: 100<br/><hr/><b>Requirements:</b><br/>- VISIT: #201 (×1)<br/>- VISIT: #202 (×1)<br/>- VISIT: #203 (×1)<br/><hr/><b>Ongoing:</b> Scout the surrounding wilderness to asse...<br/><b>Completed:</b> You've scouted the area and have a bette..."]
+    style q11 color:#000,fill:#f0f0ff,stroke:#000,stroke-width:2px
+    q10 -->|leads to| q11
+    q12["<b>Quest #12: Clear the Eastern Woods</b><br/><hr/>Givers: 101<br/><hr/><b>Requirements:</b><br/>- KILL: #301 (×8)<br/><hr/><b>Ongoing:</b> Clear the eastern woods of wolf packs th...<br/><b>Completed:</b> The eastern woods are now safe for trave..."]
+    style q12 color:#000,fill:#f0f0ff,stroke:#000,stroke-width:2px
+    q11 -->|leads to| q12
+    q13["<b>Quest #13: Clear the Western Hills</b><br/><hr/>Givers: 102<br/><hr/><b>Requirements:</b><br/>- KILL: #401 (×6)<br/><hr/><b>Ongoing:</b> Clear the western hills of bandits that ...<br/><b>Completed:</b> The western hills are now free of bandit..."]
+    style q13 color:#000,fill:#f0f0ff,stroke:#000,stroke-width:2px
+    q11 -->|leads to| q13
+    q14["<b>Quest #14: Heal the Wounded</b><br/><hr/>Givers: 103<br/><hr/><b>Requirements:</b><br/>- GATHER: #501 (×12)<br/><hr/><b>Ongoing:</b> Gather healing herbs and bring them to t...<br/><b>Completed:</b> You've provided enough herbs to treat th..."]
+    style q14 color:#000,fill:#f0f0ff,stroke:#000,stroke-width:2px
+    q10 -->|leads to| q14
+    q15["<b>Quest #15: Advanced Medicine</b><br/><hr/>Givers: 103<br/><hr/><b>Requirements:</b><br/>- USE: #601 (×1)<br/><hr/><b>Ongoing:</b> Use your knowledge to create a stronger ...<br/><b>Completed:</b> You've created a powerful healing potion..."]
+    style q15 color:#000,fill:#f0f0ff,stroke:#000,stroke-width:2px
+    q14 -->|leads to| q15
+    q16["<b>Quest #16: The Beast's Lair</b><br/><hr/>Givers: 100, 101<br/><hr/><b>Requirements:</b><br/>- VISIT: #701 (×1)<br/>- KILL: #702 (×1)<br/><hr/><b>Ongoing:</b> Track down and defeat the alpha beast re...<br/><b>Completed:</b> With the alpha beast defeated, the monst..."]
+    style q16 color:#000,fill:#f0f0ff,stroke:#000,stroke-width:2px
+    q12 -->|leads to| q16
+    q13 -->|leads to| q16
+    q17["<b>Quest #17: Village Celebration</b><br/><hr/>Givers: 100<br/><hr/><b>Requirements:</b><br/>- TALK: #105 (×1)<br/><hr/><b>Ongoing:</b> Return to the village for a celebration ...<br/><b>Completed:</b> You've been honored by the village for y..."]
+    style q17 color:#000,fill:#f0f0ff,stroke:#000,stroke-width:2px
+    q15 -->|leads to| q17
+    q16 -->|leads to| q17
+    q18["<b>Quest #18: New Threats</b><br/><hr/>Givers: 104<br/><hr/><b>Requirements:</b><br/>- VISIT: #801 (×1)<br/>- VISIT: #802 (×1)<br/>- KILL: #803 (×3)<br/><hr/><b>Ongoing:</b> Investigate rumors of a new threat emerg...<br/><b>Completed:</b> You've confirmed the presence of a new d..."]
+    style q18 color:#000,fill:#f0f0ff,stroke:#000,stroke-width:2px
+    q17 -->|leads to| q18
+```
+
 ## Installation
 
 1. Clone this repository or download the ZIP
