@@ -34,6 +34,7 @@ QuestLib is designed to handle all aspects of quest management in your game:
 
 <details>
 <summary>Mermaid diagram</summary>
+
 ```mermaid
 flowchart TD
     q10["<b>Quest #10: A Village in Need</b><br/><hr/>Givers: 100<br/><hr/><b>Requirements:</b><br/>- TALK: #105 (×1)<br/><hr/><b>Ongoing:</b> The village is under attack by monsters....<br/><b>Completed:</b> You've learned about the threats facing ..."]
@@ -65,6 +66,7 @@ flowchart TD
     style q18 color:#000,fill:#f0f0ff,stroke:#000,stroke-width:2px
     q17 -->|leads to| q18
 ```
+
 </details>
 
 ## Installation
