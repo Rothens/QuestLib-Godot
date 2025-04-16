@@ -1,0 +1,268 @@
+[gd_scene load_steps=5 format=3 uid="uid://duejwrs4q4y5q"]
+
+[ext_resource type="Script" uid="uid://db608ys6cyn2n" path="res://examples/quest_demo.gd" id="1_lbkq7"]
+[ext_resource type="Theme" uid="uid://bm8y5o2r5paxs" path="res://examples/quest_theme.tres" id="2_2tcit"]
+
+[sub_resource type="Theme" id="Theme_672ma"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tcit"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="QuestDemo" type="Node2D"]
+script = ExtResource("1_lbkq7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_2tcit")
+
+[node name="MainContainer" type="HBoxContainer" parent="CanvasLayer/UI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftPanel" type="VBoxContainer" parent="CanvasLayer/UI/MainContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/UI/MainContainer/LeftPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Quest System Demo"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/UI/MainContainer/LeftPanel"]
+layout_mode = 2
+
+[node name="ActionsLabel" type="Label" parent="CanvasLayer/UI/MainContainer/LeftPanel"]
+layout_mode = 2
+text = "Player Actions"
+horizontal_alignment = 1
+
+[node name="ActionsContainer" type="GridContainer" parent="CanvasLayer/UI/MainContainer/LeftPanel"]
+layout_mode = 2
+columns = 2
+
+[node name="TalkPriestButton" type="Button" parent="CanvasLayer/UI/MainContainer/LeftPanel/ActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Talk to Priest"
+
+[node name="VisitWild1Button" type="Button" parent="CanvasLayer/UI/MainContainer/LeftPanel/ActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Visit Wilderness 1"
+
+[node name="VisitWild2Button" type="Button" parent="CanvasLayer/UI/MainContainer/LeftPanel/ActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Visit Wilderness 2"
+
+[node name="Wild3Button" type="Button" parent="CanvasLayer/UI/MainContainer/LeftPanel/ActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Visit Wilderness 3"
+
+[node name="KillWolfButton" type="Button" parent="CanvasLayer/UI/MainContainer/LeftPanel/ActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Kill Wolf"
+
+[node name="KillBanditButton" type="Button" parent="CanvasLayer/UI/MainContainer/LeftPanel/ActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Kill Bandit"
+
+[node name="GatherHerbButton" type="Button" parent="CanvasLayer/UI/MainContainer/LeftPanel/ActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Gather Remedy Herb"
+
+[node name="UseAlchemyButton" type="Button" parent="CanvasLayer/UI/MainContainer/LeftPanel/ActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Use Alchemy Station"
+
+[node name="VisitBeastLairButton" type="Button" parent="CanvasLayer/UI/MainContainer/LeftPanel/ActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Visit Beast Lair"
+
+[node name="KillAlphaButton" type="Button" parent="CanvasLayer/UI/MainContainer/LeftPanel/ActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Kill Alpha Beast"
+
+[node name="VisitMountain1Button" type="Button" parent="CanvasLayer/UI/MainContainer/LeftPanel/ActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Visit Mountain 1"
+
+[node name="VisitMountain2Button" type="Button" parent="CanvasLayer/UI/MainContainer/LeftPanel/ActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Visit Mountain 2"
+
+[node name="KillYetiButton" type="Button" parent="CanvasLayer/UI/MainContainer/LeftPanel/ActionsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Kill Yeti"
+
+[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/UI/MainContainer/LeftPanel"]
+layout_mode = 2
+
+[node name="QuestGiversLabel" type="Label" parent="CanvasLayer/UI/MainContainer/LeftPanel"]
+layout_mode = 2
+text = "Quest Givers"
+horizontal_alignment = 1
+
+[node name="QuestGiversContainer" type="VBoxContainer" parent="CanvasLayer/UI/MainContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="QuestGiverTemplate" type="HBoxContainer" parent="CanvasLayer/UI/MainContainer/LeftPanel/QuestGiversContainer"]
+visible = false
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="CanvasLayer/UI/MainContainer/LeftPanel/QuestGiversContainer/QuestGiverTemplate"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Quest Giver Name"
+
+[node name="TalkButton" type="Button" parent="CanvasLayer/UI/MainContainer/LeftPanel/QuestGiversContainer/QuestGiverTemplate"]
+layout_mode = 2
+text = "Talk"
+
+[node name="StatusPanel" type="Panel" parent="CanvasLayer/UI/MainContainer/LeftPanel/QuestGiversContainer/QuestGiverTemplate"]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_vertical = 4
+theme = SubResource("Theme_672ma")
+theme_override_styles/panel = SubResource("StyleBoxFlat_2tcit")
+
+[node name="CenterPanel" type="VBoxContainer" parent="CanvasLayer/UI/MainContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.5
+
+[node name="ActiveQuestsLabel" type="Label" parent="CanvasLayer/UI/MainContainer/CenterPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Active Quests"
+horizontal_alignment = 1
+
+[node name="ActiveQuestsScroll" type="ScrollContainer" parent="CanvasLayer/UI/MainContainer/CenterPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="ActiveQuestsList" type="VBoxContainer" parent="CanvasLayer/UI/MainContainer/CenterPanel/ActiveQuestsScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="QuestTemplate" type="PanelContainer" parent="CanvasLayer/UI/MainContainer/CenterPanel/ActiveQuestsScroll/ActiveQuestsList"]
+visible = false
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/UI/MainContainer/CenterPanel/ActiveQuestsScroll/ActiveQuestsList/QuestTemplate"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="QuestContent" type="VBoxContainer" parent="CanvasLayer/UI/MainContainer/CenterPanel/ActiveQuestsScroll/ActiveQuestsList/QuestTemplate/MarginContainer"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="CanvasLayer/UI/MainContainer/CenterPanel/ActiveQuestsScroll/ActiveQuestsList/QuestTemplate/MarginContainer/QuestContent"]
+layout_mode = 2
+text = "Quest Title"
+
+[node name="DescriptionLabel" type="Label" parent="CanvasLayer/UI/MainContainer/CenterPanel/ActiveQuestsScroll/ActiveQuestsList/QuestTemplate/MarginContainer/QuestContent"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.85, 0.85, 1)
+theme_override_font_sizes/font_size = 14
+text = "Quest description goes here."
+autowrap_mode = 3
+
+[node name="ProgressContainer" type="VBoxContainer" parent="CanvasLayer/UI/MainContainer/CenterPanel/ActiveQuestsScroll/ActiveQuestsList/QuestTemplate/MarginContainer/QuestContent"]
+layout_mode = 2
+
+[node name="ProgressLabel" type="Label" parent="CanvasLayer/UI/MainContainer/CenterPanel/ActiveQuestsScroll/ActiveQuestsList/QuestTemplate/MarginContainer/QuestContent/ProgressContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Progress: 0/5"
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer/UI/MainContainer/CenterPanel/ActiveQuestsScroll/ActiveQuestsList/QuestTemplate/MarginContainer/QuestContent/ProgressContainer"]
+layout_mode = 2
+max_value = 1.0
+value = 0.5
+show_percentage = false
+
+[node name="RightPanel" type="VBoxContainer" parent="CanvasLayer/UI/MainContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer/UI/MainContainer/RightPanel"]
+layout_mode = 2
+size_flags_vertical = 3
+tab_alignment = 1
+current_tab = 0
+
+[node name="Available" type="ScrollContainer" parent="CanvasLayer/UI/MainContainer/RightPanel/TabContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+metadata/_tab_index = 0
+
+[node name="AvailableQuestsList" type="VBoxContainer" parent="CanvasLayer/UI/MainContainer/RightPanel/TabContainer/Available"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Completed" type="ScrollContainer" parent="CanvasLayer/UI/MainContainer/RightPanel/TabContainer"]
+visible = false
+layout_mode = 2
+horizontal_scroll_mode = 0
+metadata/_tab_index = 1
+
+[node name="CompletedQuestsList" type="VBoxContainer" parent="CanvasLayer/UI/MainContainer/RightPanel/TabContainer/Completed"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="StatusBar" type="HBoxContainer" parent="CanvasLayer/UI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -30.0
+offset_right = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="StatusLabel" type="Label" parent="CanvasLayer/UI/StatusBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Status: Ready"
+
+[node name="PlayerLabel" type="Label" parent="CanvasLayer/UI/StatusBar"]
+layout_mode = 2
+text = "Player ID: 1"
