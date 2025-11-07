@@ -1,162 +1,199 @@
 [
   {
-	"id": 10,
-	"description": "A Village in Need",
-	"ongoing": "The village is under attack by monsters. Speak with the village priest to learn more about the situation.",
-	"onfinished": "You've learned about the threats facing the village and offered to help.",
-	"questgivers": [100],
-	"prerequisites": [],
-	"required": [
-	  {
-		"id": 105,
-		"type": 4,
-		"count": 1
-	  }
-	]
+    "id": 10,
+    "description": "A Village in Need",
+    "ongoing": "The village is under attack by monsters. Speak with the village priest to learn more about the situation.",
+    "onfinished": "You've learned about the threats facing the village and offered to help.",
+    "questgivers": [100],
+    "prerequisites": [],
+    "pre_dialogue_lines": [
+      "Greetings, adventurer. Our village is under attack by monsters. We need your help to defend us.",
+      "Please hurry, the situation is dire!",
+      "We have lost many of our villagers already."
+    ],
+    "required": [
+      {
+        "id": 105,
+        "type": 4,
+        "count": 1
+      }
+    ]
   },
   {
-	"id": 11,
-	"description": "Wilderness Scout",
-	"ongoing": "Scout the surrounding wilderness to assess the monster threat. Visit three scout points marked on your map.",
-	"onfinished": "You've scouted the area and have a better understanding of the monster activity.",
-	"questgivers": [100],
-	"prerequisites": [10],
-	"required": [
-	  {
-		"id": 201,
-		"type": 3,
-		"count": 1
-	  },
-	  {
-		"id": 202,
-		"type": 3,
-		"count": 1
-	  },
-	  {
-		"id": 203,
-		"type": 3,
-		"count": 1
-	  }
-	]
+    "id": 11,
+    "description": "Wilderness Scout",
+    "ongoing": "Scout the surrounding wilderness to assess the monster threat. Visit three scout points marked on your map.",
+    "onfinished": "You've scouted the area and have a better understanding of the monster activity.",
+    "questgivers": [100],
+    "prerequisites": [10],
+    "pre_dialogue_lines": [
+      "We need to scout the surrounding wilderness to assess the monster threat.",
+      "Visit three scout points marked on your map."
+    ],
+    "required": [
+      {
+        "id": 201,
+        "type": 3,
+        "count": 1
+      },
+      {
+        "id": 202,
+        "type": 3,
+        "count": 1
+      },
+      {
+        "id": 203,
+        "type": 3,
+        "count": 1
+      }
+    ]
   },
   {
-	"id": 12,
-	"description": "Clear the Eastern Woods",
-	"ongoing": "Clear the eastern woods of wolf packs that have been terrorizing travelers.",
-	"onfinished": "The eastern woods are now safe for travelers.",
-	"questgivers": [101],
-	"prerequisites": [11],
-	"required": [
-	  {
-		"id": 301,
-		"type": 0,
-		"count": 8
-	  }
-	]
+    "id": 12,
+    "description": "Clear the Eastern Woods",
+    "ongoing": "Clear the eastern woods of wolf packs that have been terrorizing travelers.",
+    "onfinished": "The eastern woods are now safe for travelers.",
+    "questgivers": [101],
+    "prerequisites": [11],
+    "pre_dialogue_lines": [
+      "These wolves have been terrorizing travelers.",
+      "Slay these vile beasts."
+    ],
+    "required": [
+      {
+        "id": 301,
+        "type": 0,
+        "count": 8
+      }
+    ]
   },
   {
-	"id": 13,
-	"description": "Clear the Western Hills",
-	"ongoing": "Clear the western hills of bandits that have set up camp there.",
-	"onfinished": "The western hills are now free of bandits.",
-	"questgivers": [102],
-	"prerequisites": [11],
-	"required": [
-	  {
-		"id": 401,
-		"type": 0,
-		"count": 6
-	  }
-	]
+    "id": 13,
+    "description": "Clear the Western Hills",
+    "ongoing": "Clear the western hills of bandits that have set up camp there.",
+    "onfinished": "The western hills are now free of bandits.",
+    "questgivers": [102],
+    "prerequisites": [11],
+    "pre_dialogue_lines": [
+      "These bandits have been terrorizing travelers.",
+      "Get rid of them, so they can't harm anyone else."
+    ],
+    "required": [
+      {
+        "id": 401,
+        "type": 0,
+        "count": 6
+      }
+    ]
   },
   {
-	"id": 14,
-	"description": "Heal the Wounded",
-	"ongoing": "Gather healing herbs and bring them to the village healer to treat the wounded.",
-	"onfinished": "You've provided enough herbs to treat the wounded villagers.",
-	"questgivers": [103],
-	"prerequisites": [10],
-	"required": [
-	  {
-		"id": 501,
-		"type": 1,
-		"count": 12
-	  }
-	]
+    "id": 14,
+    "description": "Heal the Wounded",
+    "ongoing": "Gather healing herbs and bring them to the village healer to treat the wounded.",
+    "onfinished": "You've provided enough herbs to treat the wounded villagers.",
+    "questgivers": [103],
+    "prerequisites": [10],
+    "pre_dialogue_lines": [
+      "The wounded villagers need your help.",
+      "Gather healing herbs and bring them to the village healer."
+    ],
+    "required": [
+      {
+        "id": 501,
+        "type": 1,
+        "count": 12
+      }
+    ]
   },
   {
-	"id": 15,
-	"description": "Advanced Medicine",
-	"ongoing": "Use your knowledge to create a stronger healing potion at the alchemy station.",
-	"onfinished": "You've created a powerful healing potion that will save many lives.",
-	"questgivers": [103],
-	"prerequisites": [14],
-	"required": [
-	  {
-		"id": 601,
-		"type": 2,
-		"count": 1
-	  }
-	]
+    "id": 15,
+    "description": "Advanced Medicine",
+    "ongoing": "Use your knowledge to create a stronger healing potion at the alchemy station.",
+    "onfinished": "You've created a powerful healing potion that will save many lives.",
+    "questgivers": [103],
+    "prerequisites": [14],
+    "pre_dialogue_lines": [
+      "You've mastered the basics of medicine.",
+      "Now, let's create a more potent potion."
+    ],
+    "required": [
+      {
+        "id": 601,
+        "type": 2,
+        "count": 1
+      }
+    ]
   },
   {
-	"id": 16,
-	"description": "The Beast's Lair",
-	"ongoing": "Track down and defeat the alpha beast responsible for coordinating the monster attacks.",
-	"onfinished": "With the alpha beast defeated, the monster attacks should diminish significantly.",
-	"questgivers": [100, 101],
-	"prerequisites": [12, 13],
-	"required": [
-	  {
-		"id": 701,
-		"type": 3,
-		"count": 1
-	  },
-	  {
-		"id": 702,
-		"type": 0,
-		"count": 1
-	  }
-	]
+    "id": 16,
+    "description": "The Beast's Lair",
+    "ongoing": "Track down and defeat the alpha beast responsible for coordinating the monster attacks.",
+    "onfinished": "With the alpha beast defeated, the monster attacks should diminish significantly.",
+    "questgivers": [100, 101],
+    "prerequisites": [12, 13],
+    "pre_dialogue_lines": [
+      "We've tracked the alpha beast to its lair.",
+      "It's time to put an end to its reign of terror."
+    ],
+    "required": [
+      {
+        "id": 701,
+        "type": 3,
+        "count": 1
+      },
+      {
+        "id": 702,
+        "type": 0,
+        "count": 1
+      }
+    ]
   },
   {
-	"id": 17,
-	"description": "Village Celebration",
-	"ongoing": "Return to the village for a celebration in your honor.",
-	"onfinished": "You've been honored by the village for your heroic deeds.",
-	"questgivers": [100],
-	"prerequisites": [15, 16],
-	"required": [
-	  {
-		"id": 105,
-		"type": 4,
-		"count": 1
-	  }
-	]
+    "id": 17,
+    "description": "Village Celebration",
+    "ongoing": "Return to the village for a celebration in your honor.",
+    "onfinished": "You've been honored by the village for your heroic deeds.",
+    "questgivers": [100],
+    "prerequisites": [15, 16],
+    "pre_dialogue_lines": [
+      "We've defeated the alpha beast!",
+      "Now, let's celebrate your bravery!"
+    ],
+    "required": [
+      {
+        "id": 105,
+        "type": 4,
+        "count": 1
+      }
+    ]
   },
   {
-	"id": 18,
-	"description": "New Threats",
-	"ongoing": "Investigate rumors of a new threat emerging from the mountains to the north.",
-	"onfinished": "You've confirmed the presence of a new danger threatening the region.",
-	"questgivers": [104],
-	"prerequisites": [17],
-	"required": [
-	  {
-		"id": 801,
-		"type": 3,
-		"count": 1
-	  },
-	  {
-		"id": 802,
-		"type": 3,
-		"count": 1
-	  },
-	  {
-		"id": 803,
-		"type": 0,
-		"count": 3
-	  }
-	]
+    "id": 18,
+    "description": "New Threats",
+    "ongoing": "Investigate rumors of a new threat emerging from the mountains to the north.",
+    "onfinished": "You've confirmed the presence of a new danger threatening the region.",
+    "questgivers": [104],
+    "prerequisites": [17],
+    "pre_dialogue_lines": [
+      "We are getting worrying news from the mountains.",
+      "Scout the area to gather information."
+    ],
+    "required": [
+      {
+        "id": 801,
+        "type": 3,
+        "count": 1
+      },
+      {
+        "id": 802,
+        "type": 3,
+        "count": 1
+      },
+      {
+        "id": 803,
+        "type": 0,
+        "count": 3
+      }
+    ]
   }
 ]
