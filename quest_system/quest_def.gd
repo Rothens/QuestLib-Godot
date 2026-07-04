@@ -10,9 +10,12 @@ var touch: Array = []
 var quest_givers: Array = []
 var quest_requests: Array = []
 var pre_dialogue_lines : Array = []
+var quest_rewards: Array = []
+var xp_reward = null
 
 func _init(p_id: int, p_description: String, p_ongoing: String, p_onfinished: String,
-		p_quest_givers, p_quest_requests, p_prerequisites, p_pre_dialogue_lines):
+		p_quest_givers, p_quest_requests, p_prerequisites, p_pre_dialogue_lines,
+		p_quest_rewards = [], p_xp_reward = null):
 	id = p_id
 	description = p_description
 	ongoing = p_ongoing
@@ -29,6 +32,11 @@ func _init(p_id: int, p_description: String, p_ongoing: String, p_onfinished: St
 
 	if pre_dialogue_lines != null:
 		pre_dialogue_lines = p_pre_dialogue_lines
+
+	if p_quest_rewards != null:
+		quest_rewards = p_quest_rewards
+
+	xp_reward = p_xp_reward
 
 func add_touch(quest_id: int) -> void:
 	touch.append(quest_id)

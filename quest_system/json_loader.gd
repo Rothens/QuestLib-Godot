@@ -60,6 +60,15 @@ func load(quests: Dictionary) -> void:
 			for line in definition["pre_dialogue_lines"]:
 				pre_dialogue_lines.append(line)
 
+		var quest_rewards = []
+		if definition.has("quest_rewards") and definition["quest_rewards"] is Array:
+			for reward in definition["quest_rewards"]:
+				quest_rewards.append(int(reward))
+
+		var xp_reward = null
+		if definition.has("xp_reward") and definition["xp_reward"] != null:
+			xp_reward = int(definition["xp_reward"])
+
 		var quest_def = QuestDef.new(
 			quest_id,
 			definition["description"],
@@ -68,7 +77,9 @@ func load(quests: Dictionary) -> void:
 			quest_givers,
 			requirements,
 			prerequisites,
-			pre_dialogue_lines
+			pre_dialogue_lines,
+			quest_rewards,
+			xp_reward
 		)
 
 		if quests.has(quest_id):
